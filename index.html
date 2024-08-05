@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JK_Hardware</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./index.css"> <!-- Adicionando seu arquivo de CSS adicional -->
     <script src="script.js" defer></script>
+    <script src="./index.js" defer></script> <!-- Adicionando seu arquivo de script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"> <!-- Adicionando o link para o Font Awesome -->
 </head>
+
 <body>
     <header>
         <h1>JK_Hardware</h1>
@@ -23,8 +28,39 @@
         </div>
     </header>
 
-
     <main>
+
+    <!-- Carrossel -->
+    <div class="carrousel">
+        <div class="item-carroussel">
+            <div class="watermark-logo">
+                <img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=578c55de68&amp;attid=0.2&amp;permmsgid=msg-a:r7741772798465364667&amp;th=1901882642d1217e&amp;view=fimg&amp;fur=ip&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ9OjDSH8cLM5Pm6F7Euc1Y2YjTz2lFZJ_qyJjaYGK6UO9-k98H2rQb2IvU6EebhKF3gFU1pNXJlmEUbwg0Cb2yKBTmm2fqwJp1ezDQqh84I7wd-qnc9kBFvkfY&amp;disp=emb&amp;realattid=ii_lxf5va4q1" alt="">
+            </div>
+            <div class="item-controls">
+                <button class="btn-control btn-backward-view">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <div class="item-infos">
+                    <h1 class="title-item">Placa de vídeo RTX 3060</h1>
+                    <button class="btn-view">
+                        Ver Agora!
+                    </button>
+                </div>
+                <!-- <img class="img-carroussel" src="https://s.zst.com.br/cms-assets/2021/12/melhor-placa-de-v-deo-barata.webp" alt=""> -->
+                <button class="btn-control btn-forward-view">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+            </div>
+            <div class="controls-carroussel">
+                <div class="dot-control --active"></div>
+                <div class="dot-control"></div>
+                <div class="dot-control"></div>
+                <div class="dot-control"></div>
+                <div class="dot-control"></div>
+            </div>
+        </div>
+    </div>
+
         <section id="jogos">
             <h2>Games</h2>
             <div class="product-card" data-category="jogos">
@@ -48,7 +84,6 @@
                 </a>
             </div>
         </section>
-
 
         <section id="acessorios">
             <h2>Acessórios</h2>
@@ -137,13 +172,7 @@
                 </a>
             </div>
         </section>
-
-        <section id="outros">
-            <h2>Outros</h2>
-            <div class="product-card" data-category="outros">
-        </section>
     </main>
-
 
     <footer>
         <p>Siga-nos nas redes sociais:</p>
@@ -155,7 +184,5 @@
         <p>Contato: contato@nsei.com</p>
     </footer>
 </body>
+
 </html>
-
-
-
