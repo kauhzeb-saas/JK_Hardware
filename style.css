@@ -1,156 +1,276 @@
-:root{
-color: #ffd200;
-color: #212212;
-color: #A6A6A6;
-color: #586E26;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --blue: #0051ff;
+  --blue-50-opc: #0051ff7a;
+  --yellow: #ffd000;
+  --gray: #eeeeee;
+  --main-color: #ffd200;
+  --secondary-color: #212212; 
+  --tertiary-color: #a6a6a6; 
+  --quaternary-color: #586e26; 
 }
 
+* {
+  font-family: "Outfit", Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .2s ease;
+}
+
+.watermark-logo {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 78px;
+  height: 78px;
+  border-radius: 100%;
+  padding: 6px;
+  backdrop-filter: blur(3px);
+  background-color: var(--secondary-color-50-opc);
+}
+.watermark-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.carroussel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 700px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: var(--secondary-color);
+}
+
+.item-carroussel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  background-image: url(https://s.zst.com.br/cms-assets/2021/12/melhor-placa-de-v-deo-barata.webp);
+  background-size: cover;
+  border-radius: 12px;
+}
+
+.item-controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+  background-color: var(--secondary-color-50-opc);
+}
+
+.item-infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.title-item {
+  color: var(--main-color);
+}
+
+.img-carroussel {
+  width: 100%;
+  border-radius: 12px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color:#212121;
+  background-color: var(--main-color);
+  border-radius: 12px;
+}
+button:hover {
+  cursor: pointer;
+  color: var(--quaternary-color);
+  outline: dotted 2px var(--secondary-color);
+  background-color: transparent;
+}
+
+.btn-control {
+  width: 42px;
+  height: 100%;
+}
+
+.btn-view {
+  width: 100%;
+}
+
+.controls-carroussel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  gap: 12px;
+  width: 100%;
+}
+
+.dot-control {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  outline: solid 2px var(--yellow);
+}
+
+.dot-control:hover {
+  background-color: var(--yellow);
+  outline: none;
+}
+
+.dot-control.--active {
+  transform: scale(1.5);
+  outline: none;
+  background-color: var(--yellow);
+}
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
 }
-
 
 header {
-    background-color: #212121;
-    color: #ffd200;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #212121;
+  color: var(--main-color); 
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+  margin: 0;
+  font-size: 2.5em;
 }
-
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0 0 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0 0;
 }
-
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
-
 
 nav ul li a {
-    color: #ffd200;
-    text-decoration: none;
-    font-size: 1.2em;
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 1.2em;
 }
-
 
 .search-bar {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
 
 .search-bar input {
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    font-size: 1em;
-    border: 1px solid #ffd200;
-    border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1em;
+  border: 1px solid var(--main-color); 
+  border-radius: 5px;
 }
-
 
 main {
-    padding: 20px;
+  padding: 20px;
 }
-
 
 section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
-
 
 section h2 {
-    color: #212121;
-    font-size: 2em;
-    border-bottom: 2px solid #ffd200;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  color: #212121;
+  font-size: 2em;
+  border-bottom: 2px solid var(--main-color); 
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
-
 
 .product-card {
-    background-color: #fff;
-    border: 1px solid #212121;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: transform 0.3s;
+  background-color: #fff;
+  border: 1px solid #212121;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s;
 }
-
 
 .product-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 
 .product-card a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 20px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 20px;
 }
-
 
 .product-card h3 {
-    margin: 0;
-    font-size: 1.5em;
+  margin: 0;
+  font-size: 1.5em;
 }
-
 
 .product-card p {
-    margin: 10px 0 0 0;
-    font-size: 1.2em;
-    color: #888;
+  margin: 10px 0 0 0;
+  font-size: 1.2em;
+  color: #888;
 }
-
 
 footer {
-    background-color: #212121;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
 }
-
 
 footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0 0 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0 0;
 }
-
 
 footer ul li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
-
 
 footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
 }
-
-
-
